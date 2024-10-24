@@ -379,11 +379,11 @@ const BakeryHomepage = () => {
           <div>
             <h3 className="font-bold text-black mb-4">OUR LOCATIONS</h3>
             <ul className="space-y-2 text-gray-700">
-              <li>Pallikaranai</li>
-              <li>Medavakkam</li>
-              <li>Perumbakkam</li>
-              <li>Keelkattalai</li>
-              <li>Perambur</li>
+              <li>Ambattur</li>
+              <li>K K Road</li>
+              <li>Thirumullaivoyal</li>
+              {/* <li>Keelkattalai</li>
+              <li>Perambur</li> */}
             </ul>
           </div>
 

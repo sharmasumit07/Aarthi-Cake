@@ -176,7 +176,7 @@ const ProductPage = () => {
           {/* Full Brand Name */}
           <div className="font-serif transition-colors duration-300">
             <span className="text-2xl font-semibold" style={{ color: '#373281' }}>
-              Aarthi Cake Magic
+            Ambattur Aarthi Sweets & Bakery
             </span>
           </div>
         </motion.div>
@@ -294,11 +294,9 @@ const ProductPage = () => {
                 <FaMapMarkerAlt className="inline-block mr-2" /> OUR LOCATIONS
               </h3>
               <ul className="space-y-2 text-rose-900">
-                <li>Pallikaranai</li>
-                <li>Medavakkam</li>
-                <li>Perumbakkam</li>
-                <li>Keelkattalai</li>
-                <li>Perambur</li>
+              <li>Ambattur</li>
+              <li>K K Road</li>
+              <li>Thirumullaivoyal</li>
               </ul>
             </div>
 

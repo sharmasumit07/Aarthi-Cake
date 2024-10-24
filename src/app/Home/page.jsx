@@ -100,14 +100,14 @@ const BakeryHomepage = () => {
                             <Image
                                 src="/bakery_logo.png"
                                 alt="Aarthi Cake Magic Logo"
-                                className="w-full h-full object-contain rounded-full" 
-                                width={600} 
+                                className="w-full h-full object-contain rounded-full"
+                                width={600}
                                 height={400}
                             />
                         </div>
 
                         <div className={`font-serif ${isScrolled ? 'text-[#373281]' : 'text-[#373281]'} transition-colors duration-300`}>
-                            <span className="text-xl font-semibold">Aarthi Cake Magic</span>
+                            <span className="text-xl font-semibold">Ambattur Aarthi Sweets & Bakery</span>
                         </div>
                     </motion.div>
 
@@ -145,69 +145,69 @@ const BakeryHomepage = () => {
             </header>
 
             <main className="container mx-auto px-4 py-24">
-            <motion.div
-                className="relative h-96 rounded-lg overflow-hidden"
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8 }}
-                >
-                <div className="absolute inset-0 bg-pink-500 bg-opacity-60 z-90"></div>
-                
-                <motion.img
-                    src="/bakery.jpeg"
-                    alt="Bakery showcase"
-                    className="w-full h-full object-cover opacity-90 z-10 relative"
-                    initial={{ scale: 1.2 }}
-                    animate={{ scale: 1 }}
-                    transition={{ duration: 1.2 }}
-                />
-
                 <motion.div
-                    className="absolute inset-0 z-20"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.8, delay: 0.3 }}
+                    className="relative h-96 rounded-lg overflow-hidden"
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.8 }}
                 >
+                    <div className="absolute inset-0 bg-pink-500 bg-opacity-60 z-90"></div>
+
+                    <motion.img
+                        src="/bakery.jpeg"
+                        alt="Bakery showcase"
+                        className="w-full h-full object-cover opacity-90 z-10 relative"
+                        initial={{ scale: 1.2 }}
+                        animate={{ scale: 1 }}
+                        transition={{ duration: 1.2 }}
+                    />
+
                     <motion.div
-                    className="h-full flex flex-col items-center justify-center text-white"
-                    variants={containerVariants}
-                    initial="hidden"
-                    animate="visible"
+                        className="absolute inset-0 z-20"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.8, delay: 0.3 }}
                     >
-                    <motion.h1
-                        className="text-4xl font-bold mb-4 text-[#373281]"
-                        variants={itemVariants}
-                        animate={{ ...floatingAnimation, scale: [1, 1.02, 1] }}
-                    >
-                        Aarthi Sweets And Pastries
-                    </motion.h1>
-
-                    <motion.p
-                        className="text-xl mb-8 text-center max-w-2xl text-[#f1f1f1]"
-                        variants={itemVariants}
-                    >
-                        Let The Uniqueness Of Our Specialty Speak For Itself - Where Taste Meets Perfection.
-                    </motion.p>
-
-                    <motion.div className="flex space-x-4" variants={itemVariants}>
-                        <motion.button
-                        className="bg-[#E52A74] text-white px-6 py-2 rounded-full hover:bg-[#E52A74]/80 transition duration-300"
-                        whileHover={{ scale: 1.05, boxShadow: "0px 5px 15px rgba(229, 42, 116, 0.3)" }}
-                        whileTap={{ scale: 0.95 }}
+                        <motion.div
+                            className="h-full flex flex-col bg-rose-900 bg-opacity-50 items-center justify-center text-white"
+                            variants={containerVariants}
+                            initial="hidden"
+                            animate="visible"
                         >
-                        Delivery
-                        </motion.button>
+                            <motion.h1
+                                className="text-4xl font-bold mb-4 text-[#f1f1f1]"
+                                variants={itemVariants}
+                                animate={{ ...floatingAnimation, scale: [1, 1.02, 1] }}
+                            >
+                                Ambattur Aarthi Sweets & Bakery
+                            </motion.h1>
 
-                        <motion.button
-                        className="bg-white text-[#E52A74] px-6 py-2 rounded-full hover:bg-[#E52A74]/10 transition duration-300"
-                        whileHover={{ scale: 1.05, boxShadow: "0px 5px 15px rgba(255, 255, 255, 0.3)" }}
-                        whileTap={{ scale: 0.95 }}
-                        >
-                        Pickup
-                        </motion.button>
+                            <motion.p
+                                className="text-xl mb-8 text-center max-w-2xl text-[#f1f1f1]"
+                                variants={itemVariants}
+                            >
+                                Let The Uniqueness Of Our Specialty Speak For Itself - Where Taste Meets Perfection.
+                            </motion.p>
+
+                            <motion.div className="flex space-x-4" variants={itemVariants}>
+                                <motion.button
+                                    className="bg-[#E52A74] text-white px-6 py-2 rounded-full hover:bg-[#E52A74]/80 transition duration-300"
+                                    whileHover={{ scale: 1.05, boxShadow: "0px 5px 15px rgba(229, 42, 116, 0.3)" }}
+                                    whileTap={{ scale: 0.95 }}
+                                >
+                                    Delivery
+                                </motion.button>
+
+                                <motion.button
+                                    className="bg-white text-[#E52A74] px-6 py-2 rounded-full hover:bg-[#E52A74]/10 transition duration-300"
+                                    whileHover={{ scale: 1.05, boxShadow: "0px 5px 15px rgba(255, 255, 255, 0.3)" }}
+                                    whileTap={{ scale: 0.95 }}
+                                >
+                                    Pickup
+                                </motion.button>
+                            </motion.div>
+                        </motion.div>
                     </motion.div>
-                    </motion.div>
-                </motion.div>
                 </motion.div>
 
 
@@ -320,9 +320,16 @@ const BakeryHomepage = () => {
                                     <FaMapMarkerAlt className="inline-block mr-2" /> OUR LOCATIONS
                                 </h3>
 
-                                <p className="space-y-2 text-[#373281]" >No. 27, South Park Street,<br /> Secretariat Colony, <br /> Venkatapuram, Ambattur, <br />
+                                <div>
 
-                                    Chennai - 600053.</p>
+                                    <ul className="space-y-2 text-[#373281]">
+                                        <li>Ambattur</li>
+                                        <li>K K Road</li>
+                                        <li>Thirumullaivoyal</li>
+                                        {/* <li>Keelkattalai</li>
+              <li>Perambur</li> */}
+                                    </ul>
+                                </div>
 
                             </div>
 

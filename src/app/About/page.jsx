@@ -37,12 +37,12 @@ const AboutUs = () => {
       {
         icon: Phone,
         title: "PHONE ORDERS",
-        description: "We take orders 24/7 So give a Call: +91 7305222727"
+        description: "We take  online orders  So give a Call: +91 7305222727"
       },
       {
         icon: Headphones,
         title: "CUSTOMER SERVICE",
-        description: "24/7 Support via Call | Whatsapp | Email"
+        description: "Support via Call | Whatsapp | Email"
       },
       {
         icon: Bike,
@@ -91,7 +91,7 @@ const AboutUs = () => {
                         </div>
 
                         <div className={`font-serif ${isScrolled ? 'text-[#373281]' : 'text-[#373281]'} transition-colors duration-300`}>
-                            <span className="text-xl font-semibold">Aarthi Cake Magic</span>
+                            <span className="text-xl font-semibold">Ambattur Aarthi Sweets & Bakery</span>
                         </div>
                     </motion.div>
 
@@ -233,11 +233,9 @@ const AboutUs = () => {
                 <FaMapMarkerAlt className="inline-block mr-2" /> OUR LOCATIONS
               </h3>
               <ul className="space-y-2 text-white">
-                <li>Pallikaranai</li>
-                <li>Medavakkam</li>
-                <li>Perumbakkam</li>
-                <li>Keelkattalai</li>
-                <li>Perambur</li>
+              <li>Ambattur</li>
+              <li>K K Road</li>
+              <li>Thirumullaivoyal</li>
               </ul>
             </div>
 

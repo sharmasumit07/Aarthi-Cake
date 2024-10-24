@@ -38,7 +38,7 @@ const ContactUs = () => {
                         </div>
 
                         <div className={`font-serif ${isScrolled ? 'text-[#373281]' : 'text-[#373281]'} transition-colors duration-300`}>
-                            <span className="text-xl font-semibold">Aarthi Cake Magic</span>
+                            <span className="text-xl font-semibold">Ambattur Aarthi Sweets & Bakery</span>
                         </div>
                     </motion.div>
 
@@ -97,13 +97,14 @@ const ContactUs = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <motion.div
-            className="bg-white p-8 rounded-lg shadow-lg"
+            className="bg-white p-8 rounded-lg shadow-lg border border-pink-900"
+
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
             <h2 className="text-2xl font-bold text-red-600 mb-4 flex items-center">
-              <Store className="w-6 h-6 mr-2 text-red-600" /> Aarti Sweets And Pastries
+              <Store className="w-6 h-6 mr-2 text-red-600" /> Ambattur Aarthi Sweets & Bakery
             </h2>
             <p className="text-lg text-gray-700 mb-4">
               No. 4/853, Ground Floor Perumbakkam Main Road, Medavakkam, Chennai, Tamil Nadu 600100
@@ -113,19 +114,22 @@ const ContactUs = () => {
               <Clock className="w-6 h-6 mr-2 text-red-600" /> Store Hours
             </h3>
             <p className="text-lg text-gray-700 mb-4">
-              Monday-Sunday: 8:30 am - 10:00 pm
+              Monday-Sunday: 6:00 am - 10:30 pm
             </p>
 
             <h3 className="text-xl font-semibold text-red-600 mb-2 flex items-center">
               <MapPin className="w-6 h-6 mr-2 text-red-600" /> Our Locations
             </h3>
-            <ul className="text-lg text-gray-700 mb-4">
-              <li>Pallikaranai</li>
-              <li>Perumbakkam</li>
-              <li>Medavakkam</li>
-              <li>Keelkattalai</li>
-              <li>Perambur</li>
+            <div>
+            
+            <ul className="space-y-2 text-gray-700">
+              <li>Ambattur</li>
+              <li>K K Road</li>
+              <li>Thirumullaivoyal</li>
+              {/* <li>Keelkattalai</li>
+              <li>Perambur</li> */}
             </ul>
+          </div>
 
             <h3 className="text-xl font-semibold text-red-600 mb-2 flex items-center">
               <Truck className="w-6 h-6 mr-2 text-red-600" /> Home Delivery
@@ -136,7 +140,8 @@ const ContactUs = () => {
           </motion.div>
 
           <motion.div
-            className="bg-white p-8 rounded-lg shadow-lg"
+            className="bg-white p-8 rounded-lg shadow-lg border border-pink-900"
+
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
@@ -228,17 +233,15 @@ const ContactUs = () => {
 
             {/* Our Locations Section */}
             <div>
-              <h3 className="font-bold text-rose-800 mb-4">
-                <FaMapMarkerAlt className="inline-block mr-2" /> OUR LOCATIONS
-              </h3>
-              <ul className="space-y-2 text-rose-900">
-                <li>Pallikaranai</li>
-                <li>Medavakkam</li>
-                <li>Perumbakkam</li>
-                <li>Keelkattalai</li>
-                <li>Perambur</li>
-              </ul>
-            </div>
+            <h3 className="font-bold text-rose-800 mb-4">OUR LOCATIONS</h3>
+            <ul className="space-y-2 text-gray-700">
+              <li>Ambattur</li>
+              <li>K K Road</li>
+              <li>Thirumullaivoyal</li>
+              {/* <li>Keelkattalai</li>
+              <li>Perambur</li> */}
+            </ul>
+          </div>
 
             {/* Social Media Section */}
             <div className="text-center md:text-left">
