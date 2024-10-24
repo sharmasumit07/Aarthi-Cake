@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Search, User, ShoppingCart, Clock, MapPin, Truck, Store } from 'lucide-react';
 import { FaFacebookF, FaInstagram } from 'react-icons/fa';
-import { FaMapMarkerAlt, FaPhoneAlt, FaTruck, FaLink } from 'react-icons/fa';
+import { FaPhoneAlt, FaTruck, FaLink } from 'react-icons/fa';
 
 const ContactUs = () => {
   const [isScrolled, setIsScrolled] = useState(false);
