@@ -155,78 +155,76 @@ const ProductPage = () => {
 
   return (
     <div className="bg-rose-50 min-h-screen">
-      <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-pink-500/90 shadow-md' : 'bg-white'}`}>
-      <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <motion.div
-          className="flex items-center space-x-4"
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          {/* Larger Logo Image */}
-          <div className="w-20 h-20 flex items-center justify-center">
-            <Image
-              src="/bakery_logo.png" 
-              alt="Aarthi Cake Magic" 
-              className="w-full h-full object-contain"
-              width={600}
-              height={400}
-            />
-          </div>
-          {/* Full Brand Name */}
-          <div className="font-serif transition-colors duration-300">
-            <span className="text-2xl font-semibold" style={{ color: '#373281' }}>
-            Ambattur Aarthi Sweets & Bakery
-            </span>
-          </div>
-        </motion.div>
+      <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md' : 'bg-transparent'}`}>
+        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+          <motion.div
+            className="flex items-center space-x-3"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <div className="w-16 h-16">
+              <Image
+                src="/bakery_logo.png"
+                alt="Aarthi Cake Magic Logo"
+                className="w-full h-full object-contain rounded-full"
+                width={600}
+                height={400}
+              />
+            </div>
 
-        <nav className="hidden md:flex space-x-8">
-                        {['Home', 'About', 'Products', 'Contact', 'Stores'].map((item, index) => (
-                            <motion.a
-                                key={item}
-                                href={item}
-                                className={`${isScrolled ? 'text-[#373281]' : 'text-[#373281]'} hover:text-[#E52A74] transition-colors duration-300`}
-                                initial={{ opacity: 0, y: -20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5, delay: index * 0.1 }}
-                            >
-                                {item}
-                            </motion.a>
-                        ))}
-                    </nav>
+            <div className={`font-serif ${isScrolled ? 'text-[#373281]' : 'text-[#373281]'} transition-colors duration-300`}>
+              <span className="text-xl font-semibold">Ambattur Aarthi Sweets & Bakery</span>
+            </div>
+          </motion.div>
 
-        <motion.div
-          className="flex items-center space-x-4"
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          <Search className="w-6 h-6" style={{ color: '#373281' }} />
-          <User className="w-6 h-6" style={{ color: '#373281' }} />
-          <div className="relative">
-            <ShoppingCart className="w-6 h-6" style={{ color: '#373281' }} />
-            <span className="absolute -top-2 -right-2 bg-pink-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">
-              0
-            </span>
-          </div>
-        </motion.div>
-      </div>
-    </header>
+          <nav className="hidden md:flex space-x-8">
+            {['Home', 'About', 'Products', 'Contact'].map((item, index) => (
+              <motion.a
+                key={item}
+                href={item}
+                className={`${isScrolled ? 'text-[#373281]' : 'text-[#373281]'} hover:text-[#E52A74] transition-colors duration-300`}
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                {item}
+              </motion.a>
+            ))}
+          </nav>
+
+          <motion.div
+            className="flex items-center space-x-4"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <Search className={`w-6 h-6 ${isScrolled ? 'text-[#373281]' : 'text-[#373281]'}`} />
+            <User className={`w-6 h-6 ${isScrolled ? 'text-[#373281]' : 'text-[#373281]'}`} />
+            <div className="relative">
+              <ShoppingCart className={`w-6 h-6 ${isScrolled ? 'text-[#373281]' : 'text-[#373281]'}`} />
+              <span className="absolute -top-2 -right-2 bg-[#E52A74] text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">
+                0
+              </span>
+            </div>
+          </motion.div>
+        </div>
+      </header>
 
 
-      <h1 className="text-3xl font-bold text-center text-rose-600 pt-16">PRODUCTS</h1>
+      <h1 className="text-3xl font-bold text-center text-rose-600 pt-28"style={{ color: '#E52A74' }}>PRODUCTS</h1>
       <div className="flex container mx-auto p-4">
         {/* Categories */}
         <div className="w-1/4 pr-4">
-          <h2 className="text-xl font-bold mb-4 text-rose-800">CATEGORIES</h2>
+          <h2 className="text-xl font-bold mb-4" style={{ color: '#E52A74' }}>CATEGORIES</h2>
           <ul>
             {categories.map((category) => (
               <motion.li
                 key={category}
-                className={`cursor-pointer py-2 text-black ${selectedCategory === category ? 'font-bold text-rose-600' : ''}`}
+                className={`cursor-pointer py-2 ${selectedCategory === category ? 'font-bold' : ''}`}
+                style={{ color: selectedCategory === category ? '#E52A74' : 'black' }}
                 onClick={() => setSelectedCategory(category)}
-                whileHover={{ scale: 1.05, color: "#E11D48" }} // Hover effect for category items
+                whileHover={{ scale: 1.05, color: "#E52A74" }} // Hover effect for category items
                 transition={{ duration: 0.2 }}
               >
                 {category}
@@ -240,7 +238,7 @@ const ProductPage = () => {
           <div className="flex justify-between items-center mb-4">
             <div className="flex items-center">
               <Filter className="mr-2 text-rose-600" />
-              <span className="font-bold text-rose-800">FILTER</span>
+              <span className="font-bold text-[#E52A74]">FILTER</span>
             </div>
             <motion.select
               className="border rounded p-2 text-black"
@@ -270,46 +268,53 @@ const ProductPage = () => {
 
 
 
-      <footer className="bg-rose-100 py-12 mt-16">
+      <footer className="bg-[#E52A74]/10 py-12 mt-16">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
 
             {/* Quick Links Section */}
             <div>
-              <h3 className="font-bold text-rose-800 mb-4">
+              <h3 className="font-bold text-[#373281] mb-4">
                 <FaLink className="inline-block mr-2" /> QUICK LINKS
               </h3>
-              <ul className="space-y-2 text-rose-900">
-                <li><a href="#" className="hover:text-rose-600 transition-colors duration-300">Our Products</a></li>
-                <li><a href="#" className="hover:text-rose-600 transition-colors duration-300">Contact Us</a></li>
-                <li><a href="#" className="hover:text-rose-600 transition-colors duration-300">Privacy Policy</a></li>
-                <li><a href="#" className="hover:text-rose-600 transition-colors duration-300">Disclaimer</a></li>
-                <li><a href="#" className="hover:text-rose-600 transition-colors duration-300">Terms & Conditions</a></li>
+              <ul className="space-y-2 text-[#373281]">
+                <li><a href="#" className="hover:text-[#E52A74] transition-colors duration-300">Our Products</a></li>
+                <li><a href="#" className="hover:text-[#E52A74] transition-colors duration-300">Contact Us</a></li>
+                <li><a href="#" className="hover:text-[#E52A74] transition-colors duration-300">Privacy Policy</a></li>
+                <li><a href="#" className="hover:text-[#E52A74] transition-colors duration-300">Disclaimer</a></li>
+                <li><a href="#" className="hover:text-[#E52A74] transition-colors duration-300">Terms & Conditions</a></li>
               </ul>
             </div>
 
             {/* Our Locations Section */}
             <div>
-              <h3 className="font-bold text-rose-800 mb-4">
+              <h3 className="font-bold text-[#373281] mb-4">
                 <FaMapMarkerAlt className="inline-block mr-2" /> OUR LOCATIONS
               </h3>
-              <ul className="space-y-2 text-rose-900">
-              <li>Ambattur</li>
-              <li>K K Road</li>
-              <li>Thirumullaivoyal</li>
-              </ul>
+
+              <div>
+
+                <ul className="space-y-2 text-[#373281]">
+                  <li>Ambattur</li>
+                  <li>K K Road</li>
+                  <li>Thirumullaivoyal</li>
+                  {/* <li>Keelkattalai</li>
+              <li>Perambur</li> */}
+                </ul>
+              </div>
+
             </div>
 
             {/* Social Media Section */}
             <div className="text-center md:text-left">
-              <h3 className="font-bold text-rose-800 mb-4">
+              <h3 className="font-bold text-[#373281] mb-4">
                 FOLLOW US
               </h3>
               <div className="flex justify-center md:justify-start space-x-4">
-                <a href="#" className="text-rose-800 hover:text-rose-600 transition-colors duration-300">
+                <a href="#" className="text-[#373281] hover:text-[#E52A74] transition-colors duration-300">
                   <FaFacebookF size={28} />
                 </a>
-                <a href="#" className="text-rose-800 hover:text-rose-600 transition-colors duration-300">
+                <a href="#" className="text-[#373281] hover:text-[#E52A74] transition-colors duration-300">
                   <FaInstagram size={28} />
                 </a>
               </div>
@@ -317,17 +322,17 @@ const ProductPage = () => {
 
             {/* Contact & Delivery Section */}
             <div className="text-center md:text-left">
-              <h3 className="font-bold text-rose-800 mb-4">
+              <h3 className="font-bold text-[#373281] mb-4">
                 <FaPhoneAlt className="inline-block mr-2" /> CALL & ORDER NOW
               </h3>
-              <p className="text-rose-900">
-                <a href="tel:+917305222727" className="hover:text-rose-600 transition-colors duration-300">+91 7305222727</a>
+              <p className="text-[#373281]">
+                <a href="tel:+917305222727" className="hover:text-[#E52A74] transition-colors duration-300">+91 94441 92925 <br />
+                  +91 93607 92743</a>
               </p>
-              <h3 className="font-bold text-rose-800 mt-4">
+              <h3 className="font-bold text-[#373281] mt-4">
                 <FaTruck className="inline-block mr-2" /> DELIVERY LOCATION
               </h3>
-              <p className="text-rose-900">Delivery is limited to 15km from store.</p>
-              <p className="text-rose-700">Check delivery availability</p>
+              <p className="text-[#373281]">Delivery is limited to 15km from store.</p>
             </div>
 
           </div>

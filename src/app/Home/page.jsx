@@ -112,7 +112,7 @@ const BakeryHomepage = () => {
                     </motion.div>
 
                     <nav className="hidden md:flex space-x-8">
-                        {['Home', 'About', 'Products', 'Contact', 'Stores'].map((item, index) => (
+                        {['Home', 'About', 'Products', 'Contact'].map((item, index) => (
                             <motion.a
                                 key={item}
                                 href={item}
